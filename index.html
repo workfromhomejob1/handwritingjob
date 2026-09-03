@@ -3,24 +3,30 @@
 <head>
 
   <!-- Meta Pixel Code -->
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1055267324158527');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1055267324158527');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
+    />
+  </noscript>
   <!-- End Meta Pixel Code -->
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,13 +48,16 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
     body {
       font-family: Arial, "Noto Sans Devanagari", sans-serif;
       min-height: 100vh;
+
       background:
         radial-gradient(circle at top left, #dbeafe 0%, transparent 35%),
         radial-gradient(circle at bottom right, #dcfce7 0%, transparent 35%),
         #f5f7fb;
+
       color: #172033;
       overflow-x: hidden;
     }
+
 
     /* Background Glow */
 
@@ -56,12 +65,17 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
     body::after {
       content: "";
       position: fixed;
+
       width: 220px;
       height: 220px;
+
       border-radius: 50%;
+
       filter: blur(70px);
       opacity: .35;
+
       z-index: -1;
+
       animation: float 7s ease-in-out infinite alternate;
     }
 
@@ -75,10 +89,13 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       background: #22c55e;
       right: -80px;
       bottom: -80px;
+
       animation-delay: 2s;
     }
 
+
     @keyframes float {
+
       from {
         transform: translate(0, 0);
       }
@@ -86,31 +103,45 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       to {
         transform: translate(35px, 25px);
       }
+
     }
+
 
     /* Main Container */
 
     .container {
       width: 100%;
       max-width: 520px;
+
       min-height: 100vh;
+
       margin: auto;
       padding: 25px 16px;
+
       display: flex;
+
       align-items: center;
       justify-content: center;
     }
+
 
     /* Main Card */
 
     .card {
       width: 100%;
+
       position: relative;
+
       background: rgba(255,255,255,.94);
+
       backdrop-filter: blur(15px);
+
       border: 1px solid rgba(255,255,255,.8);
+
       border-radius: 28px;
+
       padding: 34px 23px 25px;
+
       text-align: center;
 
       box-shadow:
@@ -120,7 +151,9 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       animation: cardIn .8s ease;
     }
 
+
     @keyframes cardIn {
+
       from {
         opacity: 0;
         transform: translateY(25px) scale(.97);
@@ -130,13 +163,17 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
         opacity: 1;
         transform: translateY(0) scale(1);
       }
+
     }
+
 
     /* Top Badge */
 
     .badge {
       display: inline-flex;
+
       align-items: center;
+
       gap: 7px;
 
       padding: 8px 14px;
@@ -144,15 +181,18 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       border-radius: 50px;
 
       background: #eff6ff;
+
       color: #2563eb;
 
       font-size: 13px;
+
       font-weight: 700;
 
       margin-bottom: 20px;
 
       border: 1px solid #dbeafe;
     }
+
 
     .badge-dot {
       width: 8px;
@@ -168,16 +208,18 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       animation: dotPulse 1.5s infinite;
     }
 
+
     @keyframes dotPulse {
+
       50% {
         transform: scale(1.3);
         opacity: .65;
       }
+
     }
 
-    /* =========================
-       LOGO
-       ========================= */
+
+    /* LOGO */
 
     .logo {
       width: 120px;
@@ -192,6 +234,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       background: #ffffff;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -204,6 +247,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       transform: none;
     }
 
+
     .logo img {
       width: 100%;
       height: 100%;
@@ -215,10 +259,12 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       object-position: center;
     }
 
+
     /* Heading */
 
     h1 {
       font-size: 27px;
+
       line-height: 1.2;
 
       color: #173b70;
@@ -228,6 +274,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       letter-spacing: -.5px;
     }
 
+
     /* Job */
 
     .job {
@@ -236,6 +283,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       color: #111827;
 
       font-size: 18px;
+
       font-weight: 800;
 
       margin-bottom: 17px;
@@ -246,6 +294,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
 
       background: #f1f5f9;
     }
+
 
     /* Description */
 
@@ -261,9 +310,8 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       max-width: 410px;
     }
 
-    /* =========================
-       BUTTONS
-       ========================= */
+
+    /* BUTTONS */
 
     .button {
       position: relative;
@@ -298,13 +346,16 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
         box-shadow .2s ease;
     }
 
+
     .button:hover {
       transform: translateY(-3px);
     }
 
+
     .button:active {
       transform: scale(.97);
     }
+
 
     /* Moving Shine */
 
@@ -331,6 +382,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       animation: shine 3s infinite;
     }
 
+
     @keyframes shine {
 
       0% {
@@ -341,56 +393,17 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       100% {
         left: 150%;
       }
+
     }
+
 
     .button span {
       position: relative;
       z-index: 2;
     }
 
-    /* =========================
-       WHATSAPP
-       ========================= */
 
-    .whatsapp {
-      background:
-        linear-gradient(
-          135deg,
-          #128c45,
-          #25d366,
-          #128c45
-        );
-
-      box-shadow:
-        0 10px 28px rgba(37,211,102,.30);
-
-      animation: whatsappPulse 2s infinite;
-    }
-
-    @keyframes whatsappPulse {
-
-      0% {
-        box-shadow:
-          0 10px 28px rgba(37,211,102,.30),
-          0 0 0 0 rgba(37,211,102,.35);
-      }
-
-      60% {
-        box-shadow:
-          0 10px 28px rgba(37,211,102,.30),
-          0 0 0 10px rgba(37,211,102,0);
-      }
-
-      100% {
-        box-shadow:
-          0 10px 28px rgba(37,211,102,.30),
-          0 0 0 0 rgba(37,211,102,0);
-      }
-    }
-
-    /* =========================
-       TELEGRAM
-       ========================= */
+    /* TELEGRAM */
 
     .telegram {
       background:
@@ -406,6 +419,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
 
       animation: telegramPulse 2.5s infinite;
     }
+
 
     @keyframes telegramPulse {
 
@@ -426,7 +440,9 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
           0 10px 28px rgba(34,158,217,.25),
           0 0 0 0 rgba(34,158,217,0);
       }
+
     }
+
 
     /* Icon */
 
@@ -434,6 +450,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       font-size: 22px;
       line-height: 1;
     }
+
 
     /* Info Box */
 
@@ -455,11 +472,13 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       line-height: 1.6;
     }
 
+
     .info-box strong {
       color: #344054;
 
       font-size: 13px;
     }
+
 
     /* Footer */
 
@@ -471,6 +490,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       color: #98a2b3;
     }
 
+
     /* Mobile */
 
     @media (max-width: 380px) {
@@ -481,12 +501,14 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
 
       .card {
         padding: 28px 17px 22px;
+
         border-radius: 23px;
       }
 
       .logo {
         width: 105px;
         height: 105px;
+
         margin-bottom: 17px;
       }
 
@@ -504,6 +526,7 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
 
       .button {
         min-height: 54px;
+
         font-size: 15px;
       }
 
@@ -513,27 +536,34 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
 
 </head>
 
+
 <body>
 
   <div class="container">
 
     <main class="card">
 
+
       <!-- Status Badge -->
 
       <div class="badge">
+
         <span class="badge-dot"></span>
+
         जानकारी के लिए संपर्क करें
+
       </div>
 
 
       <!-- Logo -->
 
       <div class="logo">
+
         <img
           src="logo.png"
           alt="Vishv Book Publication Logo"
         >
+
       </div>
 
 
@@ -554,45 +584,47 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
       <!-- Description -->
 
       <p class="description">
+
         Handwriting work से संबंधित जानकारी, प्रक्रिया और
         उपलब्ध अवसरों के बारे में जानने के लिए नीचे दिए गए
         माध्यम से संपर्क करें।
+
       </p>
 
 
-      <!-- WhatsApp -->
+      <!-- Telegram: New Joining -->
 
       <a
-        class="button whatsapp"
-        href="https://wa.me/91"
+        class="button telegram"
+        href="https://t.me/Vishvbookpublications3/?text=New_Joining✍️"
         target="_blank"
         rel="noopener noreferrer"
-        onclick="fbq('track','Contact'); fbq('trackCustom','WhatsAppClick');"
+        onclick="fbq('track','Contact'); fbq('trackCustom','NewJoiningClick');"
       >
 
-        <span class="icon">💬</span>
+        <span class="icon">✍️</span>
 
         <span>
-          WhatsApp पर संपर्क करें
+          New Joining ✍️
         </span>
 
       </a>
 
 
-      <!-- Telegram -->
+      <!-- Telegram: Channel Check -->
 
       <a
         class="button telegram"
-        href="https://t.me/Vishvbookpublications3/?text=New_Registration✍️"
+        href="https://t.me/Vishvbookpublications3"
         target="_blank"
         rel="noopener noreferrer"
-        onclick="fbq('track','Contact'); fbq('trackCustom','TelegramClick');"
+        onclick="fbq('track','Contact'); fbq('trackCustom','TelegramChannelClick');"
       >
 
         <span class="icon">✈️</span>
 
         <span>
-          Telegram से जुड़ें
+          Telegram Channel Check ✅
         </span>
 
       </a>
@@ -616,10 +648,10 @@ src="https://www.facebook.com/tr?id=1055267324158527&ev=PageView&noscript=1"
         © 2026 Vishv Book Publication
       </footer>
 
+
     </main>
 
   </div>
 
 </body>
 </html>
-
