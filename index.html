@@ -7,7 +7,7 @@
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  if(!f._fbq)f._fbq=n;n.loaded=!0;n.version='2.0';
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -59,9 +59,7 @@
     }
 
 
-    /* =========================
-       BACKGROUND GLOW
-       ========================= */
+    /* Background Glow */
 
     body::before,
     body::after {
@@ -85,14 +83,12 @@
 
     body::before {
       background: #3b82f6;
-
       top: -80px;
       left: -70px;
     }
 
     body::after {
       background: #22c55e;
-
       right: -80px;
       bottom: -80px;
 
@@ -113,31 +109,23 @@
     }
 
 
-    /* =========================
-       MAIN CONTAINER
-       ========================= */
+    /* Main Container */
 
     .container {
       width: 100%;
-
       max-width: 520px;
-
       min-height: 100vh;
 
       margin: auto;
-
       padding: 25px 16px;
 
       display: flex;
-
       align-items: center;
       justify-content: center;
     }
 
 
-    /* =========================
-       MAIN CARD
-       ========================= */
+    /* Main Card */
 
     .card {
       width: 100%;
@@ -168,32 +156,23 @@
 
       from {
         opacity: 0;
-
-        transform:
-          translateY(25px)
-          scale(.97);
+        transform: translateY(25px) scale(.97);
       }
 
       to {
         opacity: 1;
-
-        transform:
-          translateY(0)
-          scale(1);
+        transform: translateY(0) scale(1);
       }
 
     }
 
 
-    /* =========================
-       BADGE
-       ========================= */
+    /* Badge */
 
     .badge {
       display: inline-flex;
 
       align-items: center;
-
       gap: 7px;
 
       padding: 8px 14px;
@@ -205,7 +184,6 @@
       color: #2563eb;
 
       font-size: 13px;
-
       font-weight: 700;
 
       margin-bottom: 20px;
@@ -233,16 +211,13 @@
 
       50% {
         transform: scale(1.3);
-
         opacity: .65;
       }
 
     }
 
 
-    /* =========================
-       LOGO
-       ========================= */
+    /* Logo */
 
     .logo {
       width: 120px;
@@ -281,9 +256,7 @@
     }
 
 
-    /* =========================
-       HEADING
-       ========================= */
+    /* Heading */
 
     h1 {
       font-size: 27px;
@@ -298,9 +271,7 @@
     }
 
 
-    /* =========================
-       JOB
-       ========================= */
+    /* Job */
 
     .job {
       display: inline-block;
@@ -321,9 +292,7 @@
     }
 
 
-    /* =========================
-       DESCRIPTION
-       ========================= */
+    /* Description */
 
     .description {
       color: #5b6472;
@@ -338,9 +307,7 @@
     }
 
 
-    /* =========================
-       BUTTONS
-       ========================= */
+    /* Buttons */
 
     .button {
       position: relative;
@@ -370,10 +337,6 @@
 
       overflow: hidden;
 
-      border: none;
-
-      cursor: pointer;
-
       transition:
         transform .2s ease,
         box-shadow .2s ease;
@@ -390,7 +353,7 @@
     }
 
 
-    /* Moving Shine */
+    /* Shine */
 
     .button::before {
       content: "";
@@ -432,14 +395,11 @@
 
     .button span {
       position: relative;
-
       z-index: 2;
     }
 
 
-    /* =========================
-       TELEGRAM
-       ========================= */
+    /* Telegram */
 
     .telegram {
       background:
@@ -480,20 +440,13 @@
     }
 
 
-    /* =========================
-       ICON
-       ========================= */
-
     .icon {
       font-size: 22px;
-
       line-height: 1;
     }
 
 
-    /* =========================
-       INFO BOX
-       ========================= */
+    /* Info Box */
 
     .info-box {
       margin-top: 22px;
@@ -521,9 +474,7 @@
     }
 
 
-    /* =========================
-       FOOTER
-       ========================= */
+    /* Footer */
 
     footer {
       margin-top: 21px;
@@ -535,122 +486,51 @@
 
 
     /* =========================
-       TIMER POPUP
+       AUTO TIMER
        ========================= */
 
-    .timer-overlay {
-      position: fixed;
+    .auto-timer {
+      margin: 18px auto 22px;
 
-      inset: 0;
+      padding: 14px 18px;
 
-      background: rgba(15, 23, 42, .65);
+      max-width: 380px;
 
-      backdrop-filter: blur(5px);
+      border-radius: 16px;
 
-      display: none;
+      background: #eff6ff;
 
-      align-items: center;
+      border: 1px solid #dbeafe;
 
-      justify-content: center;
-
-      padding: 20px;
-
-      z-index: 99999;
-    }
-
-
-    .timer-overlay.show {
-      display: flex;
-    }
-
-
-    .timer-box {
-      width: 100%;
-
-      max-width: 350px;
-
-      background: #ffffff;
-
-      border-radius: 22px;
-
-      padding: 30px 25px;
-
-      text-align: center;
-
-      box-shadow:
-        0 25px 70px rgba(0,0,0,.25);
-
-      animation: timerIn .35s ease;
-    }
-
-
-    @keyframes timerIn {
-
-      from {
-        opacity: 0;
-
-        transform:
-          scale(.9)
-          translateY(15px);
-      }
-
-      to {
-        opacity: 1;
-
-        transform:
-          scale(1)
-          translateY(0);
-      }
-
-    }
-
-
-    .timer-icon {
-      font-size: 42px;
-
-      margin-bottom: 10px;
-    }
-
-
-    .timer-title {
       color: #173b70;
-
-      font-size: 21px;
-
-      font-weight: 800;
-
-      margin-bottom: 10px;
-    }
-
-
-    .timer-text {
-      color: #667085;
 
       font-size: 14px;
 
-      line-height: 1.6;
-
-      margin-bottom: 18px;
+      font-weight: 700;
     }
 
 
-    .timer-number {
-      font-size: 38px;
+    .auto-timer-number {
+      display: inline-block;
+
+      min-width: 25px;
+
+      font-size: 20px;
 
       font-weight: 900;
 
       color: #229ed9;
-
-      margin-bottom: 15px;
     }
 
 
-    .progress-bar {
+    .timer-progress {
       width: 100%;
 
-      height: 7px;
+      height: 5px;
 
-      background: #e5e7eb;
+      margin-top: 9px;
+
+      background: #dbeafe;
 
       border-radius: 20px;
 
@@ -658,7 +538,7 @@
     }
 
 
-    .progress {
+    .timer-progress-bar {
       width: 0%;
 
       height: 100%;
@@ -671,9 +551,7 @@
     }
 
 
-    /* =========================
-       MOBILE
-       ========================= */
+    /* Mobile */
 
     @media (max-width: 380px) {
 
@@ -720,11 +598,6 @@
 
 
 <body>
-
-
-  <!-- =========================
-       MAIN
-       ========================= -->
 
   <div class="container">
 
@@ -780,13 +653,44 @@
 
 
       <!-- =========================
-           NEW JOINING BUTTON
+           AUTO 5 SECOND TIMER
+           ========================= -->
+
+      <div class="auto-timer">
+
+        ✈️ Telegram पर जाने के लिए
+
+        <span
+          class="auto-timer-number"
+          id="timerNumber"
+        >
+          5
+        </span>
+
+        सेकंड...
+
+        <div class="timer-progress">
+
+          <div
+            class="timer-progress-bar"
+            id="timerProgress"
+          ></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           NEW JOINING
            ========================= -->
 
       <a
         class="button telegram"
-        href="https://t.me/Vishvbookpublications3/?text=New_Joining✍️"
-        onclick="startTelegramTimer(event, this.href);"
+        href="https://t.me/Vishvbookpublications3/?text=New%20Joining%20%E2%9C%8D%EF%B8%8F"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="fbq('track','Contact'); fbq('trackCustom','NewJoiningClick');"
       >
 
         <span class="icon">✍️</span>
@@ -799,7 +703,7 @@
 
 
       <!-- =========================
-           CHANNEL CHECK BUTTON
+           TELEGRAM CHANNEL
            ========================= -->
 
       <a
@@ -819,9 +723,7 @@
       </a>
 
 
-      <!-- =========================
-           INFORMATION
-           ========================= -->
+      <!-- Information -->
 
       <div class="info-box">
 
@@ -850,149 +752,87 @@
 
 
   <!-- =========================
-       TIMER OVERLAY
-       ========================= -->
-
-  <div
-    class="timer-overlay"
-    id="timerOverlay"
-  >
-
-    <div class="timer-box">
-
-      <div class="timer-icon">
-        ✈️
-      </div>
-
-
-      <div class="timer-title">
-        Telegram पर जा रहे हैं
-      </div>
-
-
-      <div class="timer-text">
-        New Joining के लिए Telegram खोला जा रहा है।
-        कृपया कुछ सेकंड प्रतीक्षा करें।
-      </div>
-
-
-      <div
-        class="timer-number"
-        id="timerNumber"
-      >
-        5
-      </div>
-
-
-      <div class="progress-bar">
-
-        <div
-          class="progress"
-          id="progressBar"
-        ></div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       TIMER JAVASCRIPT
+       AUTO REDIRECT SCRIPT
        ========================= -->
 
   <script>
 
-    function startTelegramTimer(event, url) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      function() {
 
-      event.preventDefault();
+        let seconds = 5;
+
+        const timerNumber =
+          document.getElementById(
+            "timerNumber"
+          );
+
+        const timerProgress =
+          document.getElementById(
+            "timerProgress"
+          );
 
 
-      /* Meta Pixel */
+        /*
+          Telegram New Joining link
+          Message: New Joining ✍️
+        */
 
-      if (typeof fbq === "function") {
+        const telegramURL =
+          "https://t.me/Vishvbookpublications3/?text=New%20Joining%20%E2%9C%8D%EF%B8%8F";
 
-        fbq(
-          'track',
-          'Contact'
-        );
 
-        fbq(
-          'trackCustom',
-          'NewJoiningClick'
-        );
+        /* Start timer immediately */
+
+        const countdown =
+          setInterval(function() {
+
+            seconds--;
+
+            timerNumber.textContent =
+              seconds;
+
+
+            timerProgress.style.width =
+              ((5 - seconds) / 5 * 100) + "%";
+
+
+            /* Redirect at 0 */
+
+            if (seconds <= 0) {
+
+              clearInterval(countdown);
+
+
+              /*
+                Track automatic redirect
+              */
+
+              if (typeof fbq === "function") {
+
+                fbq(
+                  "trackCustom",
+                  "AutoTelegramRedirect"
+                );
+
+              }
+
+
+              /*
+                Open Telegram
+              */
+
+              window.location.href =
+                telegramURL;
+
+            }
+
+          }, 1000);
 
       }
 
-
-      /* Show Timer */
-
-      const overlay =
-        document.getElementById(
-          "timerOverlay"
-        );
-
-      const timerNumber =
-        document.getElementById(
-          "timerNumber"
-        );
-
-      const progressBar =
-        document.getElementById(
-          "progressBar"
-        );
-
-
-      overlay.classList.add("show");
-
-
-      let seconds = 5;
-
-
-      timerNumber.textContent =
-        seconds;
-
-
-      progressBar.style.width =
-        "0%";
-
-
-      /* Countdown */
-
-      const countdown =
-        setInterval(function() {
-
-          seconds--;
-
-
-          timerNumber.textContent =
-            seconds;
-
-
-          const progress =
-            ((5 - seconds) / 5) * 100;
-
-
-          progressBar.style.width =
-            progress + "%";
-
-
-          /* Redirect */
-
-          if (seconds <= 0) {
-
-            clearInterval(countdown);
-
-
-            window.location.href =
-              url;
-
-          }
-
-        }, 1000);
-
-    }
+    );
 
   </script>
 
