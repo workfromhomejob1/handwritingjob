@@ -59,11 +59,14 @@
     }
 
 
-    /* Background Glow */
+    /* =========================
+       BACKGROUND GLOW
+       ========================= */
 
     body::before,
     body::after {
       content: "";
+
       position: fixed;
 
       width: 220px;
@@ -72,6 +75,7 @@
       border-radius: 50%;
 
       filter: blur(70px);
+
       opacity: .35;
 
       z-index: -1;
@@ -81,12 +85,14 @@
 
     body::before {
       background: #3b82f6;
+
       top: -80px;
       left: -70px;
     }
 
     body::after {
       background: #22c55e;
+
       right: -80px;
       bottom: -80px;
 
@@ -107,15 +113,19 @@
     }
 
 
-    /* Main Container */
+    /* =========================
+       MAIN CONTAINER
+       ========================= */
 
     .container {
       width: 100%;
+
       max-width: 520px;
 
       min-height: 100vh;
 
       margin: auto;
+
       padding: 25px 16px;
 
       display: flex;
@@ -125,7 +135,9 @@
     }
 
 
-    /* Main Card */
+    /* =========================
+       MAIN CARD
+       ========================= */
 
     .card {
       width: 100%;
@@ -156,18 +168,26 @@
 
       from {
         opacity: 0;
-        transform: translateY(25px) scale(.97);
+
+        transform:
+          translateY(25px)
+          scale(.97);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+          translateY(0)
+          scale(1);
       }
 
     }
 
 
-    /* Top Badge */
+    /* =========================
+       BADGE
+       ========================= */
 
     .badge {
       display: inline-flex;
@@ -213,13 +233,16 @@
 
       50% {
         transform: scale(1.3);
+
         opacity: .65;
       }
 
     }
 
 
-    /* LOGO */
+    /* =========================
+       LOGO
+       ========================= */
 
     .logo {
       width: 120px;
@@ -243,8 +266,6 @@
         0 4px 12px rgba(15,23,42,.10);
 
       border: 4px solid #ffffff;
-
-      transform: none;
     }
 
 
@@ -260,7 +281,9 @@
     }
 
 
-    /* Heading */
+    /* =========================
+       HEADING
+       ========================= */
 
     h1 {
       font-size: 27px;
@@ -275,7 +298,9 @@
     }
 
 
-    /* Job */
+    /* =========================
+       JOB
+       ========================= */
 
     .job {
       display: inline-block;
@@ -296,7 +321,9 @@
     }
 
 
-    /* Description */
+    /* =========================
+       DESCRIPTION
+       ========================= */
 
     .description {
       color: #5b6472;
@@ -311,7 +338,9 @@
     }
 
 
-    /* BUTTONS */
+    /* =========================
+       BUTTONS
+       ========================= */
 
     .button {
       position: relative;
@@ -340,6 +369,10 @@
       font-weight: 800;
 
       overflow: hidden;
+
+      border: none;
+
+      cursor: pointer;
 
       transition:
         transform .2s ease,
@@ -399,11 +432,14 @@
 
     .button span {
       position: relative;
+
       z-index: 2;
     }
 
 
-    /* TELEGRAM */
+    /* =========================
+       TELEGRAM
+       ========================= */
 
     .telegram {
       background:
@@ -444,15 +480,20 @@
     }
 
 
-    /* Icon */
+    /* =========================
+       ICON
+       ========================= */
 
     .icon {
       font-size: 22px;
+
       line-height: 1;
     }
 
 
-    /* Info Box */
+    /* =========================
+       INFO BOX
+       ========================= */
 
     .info-box {
       margin-top: 22px;
@@ -480,7 +521,9 @@
     }
 
 
-    /* Footer */
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
       margin-top: 21px;
@@ -491,7 +534,146 @@
     }
 
 
-    /* Mobile */
+    /* =========================
+       TIMER POPUP
+       ========================= */
+
+    .timer-overlay {
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(15, 23, 42, .65);
+
+      backdrop-filter: blur(5px);
+
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 20px;
+
+      z-index: 99999;
+    }
+
+
+    .timer-overlay.show {
+      display: flex;
+    }
+
+
+    .timer-box {
+      width: 100%;
+
+      max-width: 350px;
+
+      background: #ffffff;
+
+      border-radius: 22px;
+
+      padding: 30px 25px;
+
+      text-align: center;
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
+
+      animation: timerIn .35s ease;
+    }
+
+
+    @keyframes timerIn {
+
+      from {
+        opacity: 0;
+
+        transform:
+          scale(.9)
+          translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          scale(1)
+          translateY(0);
+      }
+
+    }
+
+
+    .timer-icon {
+      font-size: 42px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .timer-title {
+      color: #173b70;
+
+      font-size: 21px;
+
+      font-weight: 800;
+
+      margin-bottom: 10px;
+    }
+
+
+    .timer-text {
+      color: #667085;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      margin-bottom: 18px;
+    }
+
+
+    .timer-number {
+      font-size: 38px;
+
+      font-weight: 900;
+
+      color: #229ed9;
+
+      margin-bottom: 15px;
+    }
+
+
+    .progress-bar {
+      width: 100%;
+
+      height: 7px;
+
+      background: #e5e7eb;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+    }
+
+
+    .progress {
+      width: 0%;
+
+      height: 100%;
+
+      background: #229ed9;
+
+      border-radius: 20px;
+
+      transition: width 1s linear;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
 
     @media (max-width: 380px) {
 
@@ -538,6 +720,11 @@
 
 
 <body>
+
+
+  <!-- =========================
+       MAIN
+       ========================= -->
 
   <div class="container">
 
@@ -592,14 +779,14 @@
       </p>
 
 
-      <!-- Telegram: New Joining -->
+      <!-- =========================
+           NEW JOINING BUTTON
+           ========================= -->
 
       <a
         class="button telegram"
         href="https://t.me/Vishvbookpublications3/?text=New_Joining✍️"
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick="fbq('track','Contact'); fbq('trackCustom','NewJoiningClick');"
+        onclick="startTelegramTimer(event, this.href);"
       >
 
         <span class="icon">✍️</span>
@@ -611,7 +798,9 @@
       </a>
 
 
-      <!-- Telegram: Channel Check -->
+      <!-- =========================
+           CHANNEL CHECK BUTTON
+           ========================= -->
 
       <a
         class="button telegram"
@@ -630,11 +819,17 @@
       </a>
 
 
-      <!-- Information -->
+      <!-- =========================
+           INFORMATION
+           ========================= -->
 
       <div class="info-box">
 
-        <strong>ℹ️ महत्वपूर्ण जानकारी</strong><br>
+        <strong>
+          ℹ️ महत्वपूर्ण जानकारी
+        </strong>
+
+        <br>
 
         कृपया काम की शर्तों, प्रक्रिया और किसी भी शुल्क से
         संबंधित जानकारी पहले अच्छी तरह समझ लें।
@@ -652,6 +847,155 @@
     </main>
 
   </div>
+
+
+  <!-- =========================
+       TIMER OVERLAY
+       ========================= -->
+
+  <div
+    class="timer-overlay"
+    id="timerOverlay"
+  >
+
+    <div class="timer-box">
+
+      <div class="timer-icon">
+        ✈️
+      </div>
+
+
+      <div class="timer-title">
+        Telegram पर जा रहे हैं
+      </div>
+
+
+      <div class="timer-text">
+        New Joining के लिए Telegram खोला जा रहा है।
+        कृपया कुछ सेकंड प्रतीक्षा करें।
+      </div>
+
+
+      <div
+        class="timer-number"
+        id="timerNumber"
+      >
+        5
+      </div>
+
+
+      <div class="progress-bar">
+
+        <div
+          class="progress"
+          id="progressBar"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       TIMER JAVASCRIPT
+       ========================= -->
+
+  <script>
+
+    function startTelegramTimer(event, url) {
+
+      event.preventDefault();
+
+
+      /* Meta Pixel */
+
+      if (typeof fbq === "function") {
+
+        fbq(
+          'track',
+          'Contact'
+        );
+
+        fbq(
+          'trackCustom',
+          'NewJoiningClick'
+        );
+
+      }
+
+
+      /* Show Timer */
+
+      const overlay =
+        document.getElementById(
+          "timerOverlay"
+        );
+
+      const timerNumber =
+        document.getElementById(
+          "timerNumber"
+        );
+
+      const progressBar =
+        document.getElementById(
+          "progressBar"
+        );
+
+
+      overlay.classList.add("show");
+
+
+      let seconds = 5;
+
+
+      timerNumber.textContent =
+        seconds;
+
+
+      progressBar.style.width =
+        "0%";
+
+
+      /* Countdown */
+
+      const countdown =
+        setInterval(function() {
+
+          seconds--;
+
+
+          timerNumber.textContent =
+            seconds;
+
+
+          const progress =
+            ((5 - seconds) / 5) * 100;
+
+
+          progressBar.style.width =
+            progress + "%";
+
+
+          /* Redirect */
+
+          if (seconds <= 0) {
+
+            clearInterval(countdown);
+
+
+            window.location.href =
+              url;
+
+          }
+
+        }, 1000);
+
+    }
+
+  </script>
+
 
 </body>
 </html>
