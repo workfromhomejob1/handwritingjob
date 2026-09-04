@@ -485,72 +485,6 @@
     }
 
 
-    /* =========================
-       AUTO TIMER
-       ========================= */
-
-    .auto-timer {
-      margin: 18px auto 22px;
-
-      padding: 14px 18px;
-
-      max-width: 380px;
-
-      border-radius: 16px;
-
-      background: #eff6ff;
-
-      border: 1px solid #dbeafe;
-
-      color: #173b70;
-
-      font-size: 14px;
-
-      font-weight: 700;
-    }
-
-
-    .auto-timer-number {
-      display: inline-block;
-
-      min-width: 25px;
-
-      font-size: 20px;
-
-      font-weight: 900;
-
-      color: #229ed9;
-    }
-
-
-    .timer-progress {
-      width: 100%;
-
-      height: 5px;
-
-      margin-top: 9px;
-
-      background: #dbeafe;
-
-      border-radius: 20px;
-
-      overflow: hidden;
-    }
-
-
-    .timer-progress-bar {
-      width: 0%;
-
-      height: 100%;
-
-      background: #229ed9;
-
-      border-radius: 20px;
-
-      transition: width 1s linear;
-    }
-
-
     /* Mobile */
 
     @media (max-width: 380px) {
@@ -653,35 +587,6 @@
 
 
       <!-- =========================
-           AUTO 5 SECOND TIMER
-           ========================= -->
-
-      <div class="auto-timer">
-
-        ✈️ Telegram पर जाने के लिए
-
-        <span
-          class="auto-timer-number"
-          id="timerNumber"
-        >
-          5
-        </span>
-
-        सेकंड...
-
-        <div class="timer-progress">
-
-          <div
-            class="timer-progress-bar"
-            id="timerProgress"
-          ></div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =========================
            NEW JOINING
            ========================= -->
 
@@ -749,93 +654,6 @@
     </main>
 
   </div>
-
-
-  <!-- =========================
-       AUTO REDIRECT SCRIPT
-       ========================= -->
-
-  <script>
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      function() {
-
-        let seconds = 5;
-
-        const timerNumber =
-          document.getElementById(
-            "timerNumber"
-          );
-
-        const timerProgress =
-          document.getElementById(
-            "timerProgress"
-          );
-
-
-        /*
-          Telegram New Joining link
-          Message: New Joining ✍️
-        */
-
-        const telegramURL =
-          "https://t.me/Vishvbookpublications3/?text=New%20Joining%20%E2%9C%8D%EF%B8%8F";
-
-
-        /* Start timer immediately */
-
-        const countdown =
-          setInterval(function() {
-
-            seconds--;
-
-            timerNumber.textContent =
-              seconds;
-
-
-            timerProgress.style.width =
-              ((5 - seconds) / 5 * 100) + "%";
-
-
-            /* Redirect at 0 */
-
-            if (seconds <= 0) {
-
-              clearInterval(countdown);
-
-
-              /*
-                Track automatic redirect
-              */
-
-              if (typeof fbq === "function") {
-
-                fbq(
-                  "trackCustom",
-                  "AutoTelegramRedirect"
-                );
-
-              }
-
-
-              /*
-                Open Telegram
-              */
-
-              window.location.href =
-                telegramURL;
-
-            }
-
-          }, 1000);
-
-      }
-
-    );
-
-  </script>
-
 
 </body>
 </html>
